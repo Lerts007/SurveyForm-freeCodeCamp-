@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>freeCodeCamp Survey Form</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+  </header>
+
+  <form id="survey-form">
+    <label for="name">
+      Name:
+      <input type="text" id="name" placeholder="Enter your name" required/>
+    </label>
+
+    <label for="email">
+      Email:
+      <input type="email" id="email" placeholder="Enter your Email" required/>
+    </label>
+
+    <label for="number">
+      Age (optional):
+      <input type="number" id="number" min="13" max="120" placeholder="Age" required/>
+    </label>
+
+    <label for="roles">
+      Which option best describes your current role?
+      <select id="dropdown" class="dropdown">
+        <option value="">Select current role</option>
+        <option value="1">Student</option>
+        <option value="2">Full Time Job</option>
+        <option value="3">Full Time Learner</option>
+        <option value="4">Prefer not to say</option>
+        <option value="5">Other</option>
+      </select>
+    </label>
+
+    <label for="recommend">
+      Would you recommend freeCodeCamp to a friend?
+      <input id="definitely" class="input-radio" value="definitely" type="radio" name="recommend" required/> Definitely
+      <input id="maybe" class="input-radio" value="maybe" type="radio" name="recommend" required/> Maybe
+      <input id="notSure" class="input-radio" value="notSure" type="radio" name="recommend" required/> Not sure
+    </label>
+
+    <label for="favorite">
+      What is your favorite feature of freeCodeCamp?
+      <select id="favorite" class="dropdown">
+        <option value="">Select favorite feature</option>
+        <option value="6">Challenges</option>
+        <option value="7">Projects</option>
+        <option value="8">Community</option>
+        <option value="9">Open Source</option>
+      </select>
+    </label>
+
+    <fieldset class="improved">
+      <legend> What would you like to see improved? (Check all that apply)</legend>
+
+      <label for="front-endProjects">
+      <input id="front-endProjects" class="input-checkbox" value="front-endProjects" type="checkbox" name="improved"/> Front-end Projects
+      </label>
+
+      <label for="back-endProjects">
+      <input id="back-endProjects" class="input-checkbox" value="back-endProjects" type="checkbox" name="improved"/> Back-end Projects
+      </label>
+
+      <label for="back-endProjects">
+      <input id="dataVisualization" class="input-checkbox" value="dataVisualization" type="checkbox" name="improved"/> Data Visualization
+      </label>
+
+      <label for="challenges">
+      <input id="challenges" class="input-checkbox" value="challenges" type="checkbox" name="improved"/> Challenges
+      </label>
+
+      <label for="openSourceCommunity">
+      <input id="openSourceCommunity" class="input-checkbox" value="openSourceCommunity" type="checkbox" name="improved"/> Open Source Community
+      </label>
+
+      <label for="gitterHelpRooms">
+      <input id="gitterHelpRooms" class="input-checkbox" value="gitterHelpRooms" type="checkbox" name="improved"/> Gitter help rooms
+      </label>
+
+      <label for="videos">
+      <input id="videos" class="input-checkbox" value="videos" type="checkbox" name="improved"/> Videos
+      </label>
+
+      <label for="cityMeetups">
+      <input id="cityMeetups" class="input-checkbox" value="cityMeetups" type="checkbox" name="improved"/> City Meetups
+      </label>
+
+      <label for="wiki">
+      <input id="wiki" class="input-checkbox" value="wiki" type="checkbox" name="improved"/> Wiki
+      </label>
+
+      <label for="forum">
+      <input id="forum" class="input-checkbox" value="forum" type="checkbox" name="improved"/> Forum
+      </label>
+
+      <label for="additionalCourses">
+      <input id="additionalCourses" class="input-checkbox" value="additionalCourses" type="checkbox" name="improved"/> Additional Courses
+      </label>
+    </fieldset>
+
+    <label for="comments">Any comments or suggestions?</label>
+    <textarea id="comments" name="comments" rows="3" cols="30" placeholder="Enter your comment here..."></textarea>
+
+    <input id="submit" type="submit" value="Submit" />
+  </form>
+</body>
+</html>
