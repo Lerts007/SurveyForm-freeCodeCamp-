@@ -1,3 +1,8 @@
+:root {
+  --text-color: #f3f3f3;
+  --submit-color: #37af65;
+}
+
 body {
   width: 100%;
   margin: 0;
@@ -5,7 +10,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.4;
-  color: #f3f3f3;
+  color: var(--text-color);
 }
 
 body::before {
@@ -31,6 +36,7 @@ header,
 form {
   width: 700px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 header {
   margin-top: 50px;
@@ -63,35 +69,52 @@ fieldset {
   margin: 0;
   padding: 0;
   border: none;
-  width: inherit;
+  box-sizing: border-box;
 }
 
 label,
-input {
+input,
+select,
+textarea {
   display: block;
   width: 100%;
   box-sizing: border-box;
+  margin-top: 8px;
 }
-label {
-  font-size: 1.125em;
-}
+
 input,
 button,
 select,
 textarea {
-  margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-input,
-select {
   height: 2.375rem;
   padding: 6px 12px;
   color: #495057;
   background: #fff;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
+
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+label,
+select {
+  margin-bottom: 30px;
+}
+label {
+  font-size: 1.125em;
+}
+
+.favorite label,
+.improved label {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.favorite label:last-of-type,
+.improved label:last-of-type {
+  margin-bottom: 30px;
 }
 
 .input-radio,
@@ -101,4 +124,15 @@ select {
   display: inline-block;
   background: red;
   vertical-align: middle;
+}
+
+textarea {
+  height: 150px;
+  margin-bottom: 30px;
+}
+
+#submit {
+  background-color: var(--submit-color);
+  border-color: var(--submit-color);
+  color: var(--text-color);
 }
